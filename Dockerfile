@@ -1,8 +1,13 @@
-#A simple dockerfile for nmap
 FROM alpine:latest
 MAINTAINER Serdar.Sarioglu@mysystem.org
 
-RUN apk update && apk add openssh curl bash python py-pip groff less mailcap bind-tools
-RUN pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic
-RUN rm -rf /var/cache/apk/*
+# Install Requirements for Azure CLI and AWS CLI
+RUN apk update && apk add openssh curl bash python py-pip groff less mailcap bind-tools bash py-pip
+RUN pip install --upgrade pip
+RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python-dev make
 
+# Install Azure CLI and AWS CLI
+RUN pip install --upgrade awscli python-magic
+RUN pip install azure-cli
+
+RUN rm -rf /var/cache/apk/*
