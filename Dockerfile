@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Serdar.Sarioglu@mysystem.org
 
 # Install Requirements for Azure CLI and AWS CLI
-RUN apk update && apk add openssh curl bash python py-pip groff less mailcap bind-tools bash py-pip
+RUN apk update && apk add openssh curl bash python py-pip groff less mailcap bind-tools py-pip
 RUN pip install --upgrade pip
 RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python-dev make
 
