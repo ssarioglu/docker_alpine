@@ -8,6 +8,8 @@ Yet another alpine image contains
 - DNS Tools
 - Nmap
 
-To run use: 
 
-docker run -it ssarioglu/alpine
+Run Docker Container
+-----------------
+
+    docker run -it ssarioglu/alpine
