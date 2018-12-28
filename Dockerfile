@@ -11,3 +11,5 @@ RUN pip install --upgrade awscli python-magic
 RUN pip install azure-cli
 
 RUN rm -rf /var/cache/apk/*
+
+ENTRYPOINT ["/bin/bash"]
