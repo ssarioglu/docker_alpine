@@ -17,4 +17,8 @@ RUN pip install azure-cli
 
 RUN rm -rf /var/cache/apk/*
 
+#Copy Scripts
+COPY scripts /scripts
+RUN chmod -R 777 /scripts
+
 ENTRYPOINT ["/bin/bash"]
