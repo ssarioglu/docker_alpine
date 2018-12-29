@@ -8,6 +8,7 @@ fi
 
 URL=$1
 clear
+echo "test" > old.html
 for (( ; ; )); do
     mv new.html old.html 2> /dev/null
     curl $URL -L --compressed -s > new.html
