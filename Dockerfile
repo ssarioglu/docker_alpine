@@ -3,7 +3,7 @@ MAINTAINER Serdar.Sarioglu@mysystem.org
 
 # Install Basic Tools
 RUN apk update
-RUN apk add openssh busybox-extras wget curl bash lftp \
+RUN apk add openssh busybox-extras wget curl bash lftp htop \
 python py-pip groff less mailcap bind-tools \
 nmap nmap-scripts nmap-doc nmap-nping nmap-ncat zmap
 
