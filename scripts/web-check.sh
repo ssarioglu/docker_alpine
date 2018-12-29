@@ -13,8 +13,9 @@ for (( ; ; )); do
     curl $URL -L --compressed -s > new.html
     DIFF_OUTPUT="$(diff new.html old.html)"
     if [ "0" != "${#DIFF_OUTPUT}" ]; then
-
-         echo "$1 changed!"
-        sleep 10
+        echo $(date +"%T") "$1 changed!"
+    else
+        echo $(date +"%T") "No Change Detected"
     fi
+    sleep 10
 done
