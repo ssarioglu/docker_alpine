@@ -1,14 +1,15 @@
 #!/bin/bash
-echo use script with ./web-check.sh www.nba.com Basketball
+echo use script with ./web-check.sh www.nba.com
 
-while [ 1 ];
-do
-    count=`curl -s "$1" | grep -c "$2"`
+URL=$1
 
-    if [ "$count" != "0" ]
-    then
-       echo "$1 updated!"
-       exit 0
+for (( ; ; )); do
+    mv new.html old.html 2> /dev/null
+    curl $URL -L --compressed -s > new.html
+    DIFF_OUTPUT="$(diff new.html old.html)"
+    if [ "0" != "${#DIFF_OUTPUT}" ]; then
+
+         echo "$1 updated!"
+        sleep 10
     fi
-    sleep 10
 done
