@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]
   then
-    echo "use script with ulr like ./web-check.sh www.nba.com"
+    echo "use script with url like ./web-check.sh grafclouds.com"
     exit 0
 fi
 
