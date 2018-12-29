@@ -7,12 +7,11 @@ if [ -z "$1" ]
 fi
 
 URL=$1
-
+clear
 for (( ; ; )); do
     mv new.html old.html 2> /dev/null
     curl $URL -L --compressed -s > new.html
     DIFF_OUTPUT="$(diff new.html old.html)"
-    clear
     if [ "0" != "${#DIFF_OUTPUT}" ]; then
         echo $(date +"%T") "$1 changed!"
     else
