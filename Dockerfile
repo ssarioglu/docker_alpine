@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Serdar.Sarioglu@mysystem.org
+MAINTAINER Serdar Sarioglu, Serdar.Sarioglu@mysystem.org
 
 # Install Basic Tools
 RUN apk update && apk upgrade
