@@ -1,13 +1,12 @@
 # Alpine Base Docker Image
-Yet another alpine image contains 
+Yet another alpine image contains;
 
 - Bash
-- AWS Cli
-- Azure Cli 
+- AWS CLI
+- Azure CLI
 - Telnet / SSH
 - DNS Tools
 - Nmap
-
 
 Run Docker Container
 -----------------
@@ -18,6 +17,5 @@ Disclaimer
 -----------------
 
 Use dockerfiles for educational purposes. Project license does not apply to use of this material.
-
 
 Serdar SARIOGLU ([Twitter](https://twitter.com/serdarsarioglu) | [Linkedin](https://www.linkedin.com/in/serdarsarioglu) | [Blog](http://mysystem.org))
