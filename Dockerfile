@@ -6,6 +6,7 @@ RUN apk update && apk upgrade
 RUN apk add openssh busybox-extras wget curl bash lftp htop \
 git docker python py-pip groff less mailcap bind-tools \
 nmap nmap-scripts nmap-doc nmap-nping nmap-ncat zmap
+RUN apk add hping3 --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
 
 # Install PIP
 RUN pip install --upgrade pip
