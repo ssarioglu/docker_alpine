@@ -7,6 +7,8 @@ Yet another alpine image contains;
 - Telnet / SSH
 - DNS Tools
 - Nmap
+- MTR
+- Hping3 
 
 Run Docker Container
 -----------------
