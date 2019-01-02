@@ -7,6 +7,7 @@ Yet another alpine image contains;
 - Telnet / SSH
 - DNS Tools
 - Nmap
+- Zmap
 - MTR
 - Hping3 
 
