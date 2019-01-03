@@ -20,9 +20,7 @@ RUN rm -rf /var/cache/apk/*
 
 #Copy Scripts
 COPY scripts /scripts
+COPY modt /etc/motd
 RUN chmod -R 777 /scripts
-
-
-
 
 ENTRYPOINT ["/bin/bash"]
