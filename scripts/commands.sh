@@ -1,1 +1,0 @@
-for i in {1..5000}; do docker pull ssarioglu/alpine&&docker image rm ssarioglu/alpine; done
