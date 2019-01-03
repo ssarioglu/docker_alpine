@@ -23,18 +23,6 @@ COPY scripts /scripts
 RUN chmod -R 777 /scripts
 
 
-RUN echo '[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/issue && cat /etc/motd' \
-    >> /etc/bash.bashrc \
-    ; echo "\
-===================================================================\n\
-= SomeApp Docker container                                        =\n\
-===================================================================\n\
-\n\
-SomeApp: The appiest app of them all.\n\
-(c) Serdar Sarioglu 2015\n\
-\n\
-Source directory is $INSTALL\n"\
-    > /etc/motd
 
 
 ENTRYPOINT ["/bin/bash"]
